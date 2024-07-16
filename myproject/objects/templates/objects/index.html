@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Список объектов</title>
+    <!-- Ваши стили здесь -->
+</head>
+<body>
+    <h1>Список объектов</h1>
+    {% for object in object_list %}
+    <div class="object">
+        <h2>{{ object.name }}</h2>
+        <img src="{{ object.image.url }}" alt="{{ object.name }}">
+        <!-- Дополнительные стили и теги по желанию -->
+    </div>
+    {% endfor %}
+</body>
+</html>

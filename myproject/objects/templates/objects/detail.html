@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ object.name }}</title>
+    <!-- Ваши стили здесь -->
+</head>
+<body>
+    <h1>{{ object.name }}</h1>
+    <div class="details">
+        <img src="{{ object.image.url }}" alt="{{ object.name }}">
+        <p>{{ object.description }}</p>
+        <p>Дата выпуска: {{ object.release_date }}</p>
+        {% if object.video_url %}
+        <video controls>
+            <source src="{{ object.video_url }}" type="video/mp4">
+            Ваш браузер не поддерживает видео.
+        </video>
+        {% endif %}
+        <!-- Дополнительные теги и стили по желанию -->
+    </div>
+</body>
+</html>
