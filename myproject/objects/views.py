@@ -1,4 +1,4 @@
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import render, get_object_or_404, HttpResponse
 from .models import Object
 
 def object_list(request):
@@ -14,3 +14,6 @@ def object_detail(request, object_id):
         'object': object
     }
     return render(request, 'objects/detail.html', context)
+
+def new_fucnction(request):
+    return HttpResponse('OK')
